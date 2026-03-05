@@ -29,6 +29,7 @@ for file in "$INPUT_DIR"/chapter_03.md; do
         sed -i '/质量监控体系验证结果/,/验证结论/d' "$OUTPUT_DIR/$filename"
         sed -i '/严格按质量监控系统执行，验证体系有效性/d' "$OUTPUT_DIR/$filename"
         sed -i '/新手大礼包免费使用/d' "$OUTPUT_DIR/$filename"
+        sed -i '/## 第一节.*\|## 第二节.*\|## 第三节.*/d' "$OUTPUT_DIR/$filename"
         
         # 再次过滤可能漏过的非正文内容
         sed -i '/【第3章开始状态】/d' "$OUTPUT_DIR/$filename"
@@ -38,6 +39,7 @@ for file in "$INPUT_DIR"/chapter_03.md; do
         sed -i '/质量监控体系验证结果/d' "$OUTPUT_DIR/$filename"
         sed -i '/严格按质量监控系统执行，验证体系有效性/d' "$OUTPUT_DIR/$filename"
         sed -i '/新手大礼包免费使用/d' "$OUTPUT_DIR/$filename"
+        sed -i '/## 第一节.*\|## 第二节.*\|## 第三节.*/d' "$OUTPUT_DIR/$filename"
         
         # 直接删除最后一个【---】
         sed -i '/---$/d' "$OUTPUT_DIR/$filename"
