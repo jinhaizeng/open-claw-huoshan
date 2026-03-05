@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # 过滤所有章节内部状态追踪和监控内容的脚本（最终版）
-# 只保留有效的脚本版本
 
 INPUT_DIR="/root/.openclaw/workspace/novel_project/chapters"
 OUTPUT_DIR="/root/.openclaw/workspace/novel_project/formal"
@@ -30,6 +29,7 @@ for file in "$INPUT_DIR"/chapter_0[1-9].md "$INPUT_DIR"/chapter_10.md; do
         sed -i '/严格按质量监控系统执行，验证体系有效性/d' "$OUTPUT_DIR/$filename"
         sed -i '/新手大礼包免费使用/d' "$OUTPUT_DIR/$filename"
         sed -i '/## 第一节.*\|## 第二节.*\|## 第三节.*/d' "$OUTPUT_DIR/$filename"
+        sed -i '/> 第[0-9]天完成.*/d' "$OUTPUT_DIR/$filename"
         
         # 再次过滤可能漏过的非正文内容
         sed -i '/【第[0-9]章开始状态】/d' "$OUTPUT_DIR/$filename"
@@ -40,6 +40,7 @@ for file in "$INPUT_DIR"/chapter_0[1-9].md "$INPUT_DIR"/chapter_10.md; do
         sed -i '/严格按质量监控系统执行，验证体系有效性/d' "$OUTPUT_DIR/$filename"
         sed -i '/新手大礼包免费使用/d' "$OUTPUT_DIR/$filename"
         sed -i '/## 第一节.*\|## 第二节.*\|## 第三节.*/d' "$OUTPUT_DIR/$filename"
+        sed -i '/> 第[0-9]天完成.*/d' "$OUTPUT_DIR/$filename"
         
         # 直接删除最后一个【---】
         sed -i '/---$/d' "$OUTPUT_DIR/$filename"
