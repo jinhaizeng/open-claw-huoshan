@@ -10,7 +10,7 @@ OUTPUT_DIR="/root/.openclaw/workspace/novel_project/formal"
 mkdir -p "$OUTPUT_DIR"
 
 # 处理每个章节
-for file in "$INPUT_DIR"/chapter_0[1-9].md "$INPUT_DIR"/chapter_10.md; do
+for file in "$INPUT_DIR"/chapter_03.md; do
     if [ -f "$file" ]; then
         filename=$(basename "$file")
         
@@ -22,10 +22,25 @@ for file in "$INPUT_DIR"/chapter_0[1-9].md "$INPUT_DIR"/chapter_10.md; do
         sed -i '/<!-- INTERNAL -->/,/<!-- \/INTERNAL -->/d' "$OUTPUT_DIR/$filename"
         
         # 过滤非正文内容
-        sed -i '/【第[0-9]章开始状态】/,/---/d' "$OUTPUT_DIR/$filename"
+        sed -i '/【第3章开始状态】/,/---/d' "$OUTPUT_DIR/$filename"
         sed -i '/【状态更新[0-9]】/,/---/d' "$OUTPUT_DIR/$filename"
-        sed -i '/【第[0-9]章结束状态】/,/---/d' "$OUTPUT_DIR/$filename"
+        sed -i '/【第3章结束状态】/,/---/d' "$OUTPUT_DIR/$filename"
         sed -i '/【下一章承接提示】/,/---/d' "$OUTPUT_DIR/$filename"
+        sed -i '/质量监控体系验证结果/,/验证结论/d' "$OUTPUT_DIR/$filename"
+        sed -i '/严格按质量监控系统执行，验证体系有效性/d' "$OUTPUT_DIR/$filename"
+        sed -i '/新手大礼包免费使用/d' "$OUTPUT_DIR/$filename"
+        
+        # 再次过滤可能漏过的非正文内容
+        sed -i '/【第3章开始状态】/d' "$OUTPUT_DIR/$filename"
+        sed -i '/【状态更新[0-9]】/d' "$OUTPUT_DIR/$filename"
+        sed -i '/【第3章结束状态】/d' "$OUTPUT_DIR/$filename"
+        sed -i '/【下一章承接提示】/d' "$OUTPUT_DIR/$filename"
+        sed -i '/质量监控体系验证结果/d' "$OUTPUT_DIR/$filename"
+        sed -i '/严格按质量监控系统执行，验证体系有效性/d' "$OUTPUT_DIR/$filename"
+        sed -i '/新手大礼包免费使用/d' "$OUTPUT_DIR/$filename"
+        
+        # 直接删除最后一个【---】
+        sed -i '/---$/d' "$OUTPUT_DIR/$filename"
         
         # 删除多余的空行
         sed -i '/^$/N;/^\n$/D' "$OUTPUT_DIR/$filename"
