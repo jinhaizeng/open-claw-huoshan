@@ -28,7 +28,7 @@ for file in "$INPUT_DIR"/chapter_0[1-9].md "$INPUT_DIR"/chapter_10.md; do
         sed -i '/质量监控体系验证结果/,/验证结论/d' "$OUTPUT_DIR/$filename"
         sed -i '/严格按质量监控系统执行，验证体系有效性/d' "$OUTPUT_DIR/$filename"
         sed -i '/新手大礼包免费使用/d' "$OUTPUT_DIR/$filename"
-        sed -i '/## 第一节.*\|## 第二节.*\|## 第三节.*/d' "$OUTPUT_DIR/$filename"
+        sed -i '/## 第一节.*\|## 第二节.*\|## 第三节.*\|## 第四节.*\|## 第五节.*/d' "$OUTPUT_DIR/$filename"
         sed -i '/> 第[0-9]天完成.*/d' "$OUTPUT_DIR/$filename"
         
         # 再次过滤可能漏过的非正文内容
@@ -39,7 +39,7 @@ for file in "$INPUT_DIR"/chapter_0[1-9].md "$INPUT_DIR"/chapter_10.md; do
         sed -i '/质量监控体系验证结果/d' "$OUTPUT_DIR/$filename"
         sed -i '/严格按质量监控系统执行，验证体系有效性/d' "$OUTPUT_DIR/$filename"
         sed -i '/新手大礼包免费使用/d' "$OUTPUT_DIR/$filename"
-        sed -i '/## 第一节.*\|## 第二节.*\|## 第三节.*/d' "$OUTPUT_DIR/$filename"
+        sed -i '/## 第一节.*\|## 第二节.*\|## 第三节.*\|## 第四节.*\|## 第五节.*/d' "$OUTPUT_DIR/$filename"
         sed -i '/> 第[0-9]天完成.*/d' "$OUTPUT_DIR/$filename"
         
         # 直接删除最后一个【---】
