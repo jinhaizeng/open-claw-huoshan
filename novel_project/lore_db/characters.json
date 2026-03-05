@@ -1,0 +1,191 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-03-05",
+  "characters": [
+    {
+      "id": "char_001",
+      "name": "萧云",
+      "aliases": ["萧师兄", "萧废物", "词条至尊"],
+      "role": "主角",
+      "status": "active",
+      "faction": {
+        "current": "青云宗外门",
+        "history": ["萧家", "青云宗外门"]
+      },
+      "realm": {
+        "current": "炼体境七重",
+        "progress": ["炼体境三重", "炼体境五重", "炼体境七重"]
+      },
+      "innate_talent": {
+        "spirit_root": "四灵根（普通）",
+        "special": "词条提取系统（唯一）"
+      },
+      "abilities": [
+        {
+          "name": "词条提取",
+          "description": "从万物提取词条，消耗寿命",
+          "source": "系统"
+        },
+        {
+          "name": "词条合成",
+          "description": "将低级词条合成为高级词条",
+          "source": "系统"
+        },
+        {
+          "name": "词条赋予",
+          "description": "将词条赋予自己或他人",
+          "source": "系统"
+        }
+      ],
+      "tags": [
+        {
+          "name": "破军之力",
+          "grade": "E级",
+          "source": "合成",
+          "effect": "攻击附带破甲效果，有几率触发双倍伤害"
+        },
+        {
+          "name": "瞬影杀",
+          "grade": "D级",
+          "source": "合成",
+          "effect": "攻击附带瞬移效果，无法被预判"
+        }
+      ],
+      "items": [
+        {
+          "name": "储物袋",
+          "grade": "凡品",
+          "quantity": 1
+        }
+      ],
+      "relationships": [
+        {
+          "target": "char_002",
+          "name": "林天寒",
+          "relation": "仇人（前世+今生）",
+          "emotion": "杀意"
+        },
+        {
+          "target": "char_003",
+          "name": "苏婉儿",
+          "relation": "前世恋人，今生陌路",
+          "emotion": "冷漠"
+        }
+      ],
+      "backstory": "萧家旁支弟子，四灵根普通资质，前世被林天寒挖去灵根致死，重生后觉醒词条提取系统。",
+      "personality": "冷静、隐忍、果断，对敌人毫不留情，对真心待己之人重情重义",
+      "current_goals": [
+        "收集更多词条",
+        "提升实力",
+        "准备三个月后生死战击败林天寒"
+      ],
+      "notes": "核心设定：用看似垃圾的词条合成逆天词条，实现降维打击。"
+    },
+    {
+      "id": "char_002",
+      "name": "林天寒",
+      "aliases": ["林师兄", "林天才"],
+      "role": "主要反派",
+      "status": "active",
+      "faction": {
+        "current": "青云宗内门",
+        "history": ["林家"]
+      },
+      "realm": {
+        "current": "凝气境九重（即将突破筑基）",
+        "progress": []
+      },
+      "innate_talent": {
+        "spirit_root": "天灵根（冰属性）",
+        "special": "九幽寒冰体（未觉醒）"
+      },
+      "abilities": [
+        {
+          "name": "寒冰真气",
+          "description": "冰属性功法，攻击力强大",
+          "source": "青云宗"
+        }
+      ],
+      "tags": [],
+      "items": [],
+      "relationships": [
+        {
+          "target": "char_001",
+          "name": "萧云",
+          "relation": "仇敌",
+          "emotion": "轻蔑、嫉妒"
+        },
+        {
+          "target": "char_003",
+          "name": "苏婉儿",
+          "relation": "利用关系",
+          "emotion": "玩味"
+        }
+      ],
+      "backstory": "林家嫡子，天灵根天才，一直嫉妒萧云的悟性（前世），今生发现萧云更妖孽，决心除之而后快。",
+      "personality": "阴险、自负、嫉妒心强，见不得别人比自己好",
+      "current_goals": [
+        "觉醒九幽寒冰体",
+        "突破筑基境",
+        "除掉萧云"
+      ],
+      "notes": "前世成功觉醒S级体质，今生觉醒时间提前，但萧云的成长更快。"
+    },
+    {
+      "id": "char_003",
+      "name": "苏婉儿",
+      "aliases": ["苏师妹", "绿茶"],
+      "role": "次要反派",
+      "status": "active",
+      "faction": {
+        "current": "青云宗外门",
+        "history": []
+      },
+      "realm": {
+        "current": "炼体境五重",
+        "progress": []
+      },
+      "innate_talent": {
+        "spirit_root": "三灵根",
+        "special": "无"
+      },
+      "abilities": [],
+      "tags": [
+        {
+          "name": "水性杨花",
+          "grade": "C级（负面）",
+          "source": "天生",
+          "effect": "容易背叛，见异思迁"
+        }
+      ],
+      "items": [],
+      "relationships": [
+        {
+          "target": "char_001",
+          "name": "萧云",
+          "relation": "前世恋人，今生被拒",
+          "emotion": "错愕、不甘"
+        },
+        {
+          "target": "char_002",
+          "name": "林天寒",
+          "relation": "攀附对象",
+          "emotion": "讨好"
+        }
+      ],
+      "backstory": "普通世家女，一直暗恋萧云（前世），但看到更强的林天寒后果断背叛。今生想继续攀附萧云，被冷漠拒绝后转投林天寒。",
+      "personality": "虚荣、势力、善于伪装",
+      "current_goals": [
+        "攀附强者",
+        "获得资源"
+      ],
+      "notes": "典型绿茶角色，用于衬托萧云的决绝和眼光。"
+    }
+  ],
+  "metadata": {
+    "total_characters": 3,
+    "main_characters": ["char_001"],
+    "supporting_characters": [],
+    "antagonists": ["char_002", "char_003"]
+  }
+}
