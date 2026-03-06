@@ -34,6 +34,16 @@ for file in "$INPUT_DIR"/chapter_0[1-9]_final.md "$INPUT_DIR"/chapter_10_final.m
         # 清理TODO标记
         sed -i '/\[TODO:.*\]/d' "$OUTPUT_DIR/$filename"
         
+        # 清理末尾的状态追踪表表格（关键！）
+        # 这种格式：| **xxx** | xxx | 萧炎 | 日期 |
+        sed -i '/| \*\*当前境界\*\*.*|/d' "$OUTPUT_DIR/$filename"
+        sed -i '/| \*\*灵根状态\*\*.*|/d' "$OUTPUT_DIR/$filename"
+        sed -i '/| \*\*当前寿命\*\*.*|/d' "$OUTPUT_DIR/$filename"
+        sed -i '/| \*\*所在位置\*\*.*|/d' "$OUTPUT_DIR/$filename"
+        sed -i '/| \*\*主要敌人\*\*.*|/d' "$OUTPUT_DIR/$filename"
+        sed -i '/| \*\*已获得功法\*\*.*|/d' "$OUTPUT_DIR/$filename"
+        sed -i '/| \*\*当前词条\*\*.*|/d' "$OUTPUT_DIR/$filename"
+        
         # 删除最后一个 ---
         sed -i '/^---$/d' "$OUTPUT_DIR/$filename"
         
